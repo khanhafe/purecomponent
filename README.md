@@ -1,0 +1,2 @@
+# purecomponent
+Created with CodeSandbox
