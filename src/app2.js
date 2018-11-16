@@ -6,14 +6,14 @@ export default class App extends Component {
     this.state = { messages: [] };
 
     // binds
-    this._getLastMessage = this._getLastMessage.bind(this);
+    // this._getLastMessage = this._getLastMessage.bind(this);
     this._onMessageChange = this._onMessageChange.bind(this);
   }
 
-  _getLastMessage() {
-    const lastMessage = this.state.messages[this.state.messages.length - 1];
-    return lastMessage === undefined ? "" : lastMessage;
-  }
+  // _getLastMessage() {
+  //   const lastMessage = this.state.messages[this.state.messages.length - 1];
+  //   return lastMessage === undefined ? "" : lastMessage;
+  // }
 
   _onMessageChange(event) {
     const messages = [...this.state.messages];
