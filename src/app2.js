@@ -29,26 +29,12 @@ export default class App extends Component {
           onChange={this._onMessageChange}
           style={{ margin: "10px" }}
         />
-        <MessageList messages={this.state.messages} />
+        <ul>
+          {this.state.messages.map((i, m) => (
+            <li style={{ margin: "10px" }}> {i} </li>
+          ))}
+        </ul>
       </div>
     );
-  }
-}
-
-class MessageList extends Component {
-  render() {
-    return (
-      <ul>
-        {this.props.messages.map((m, i) => (
-          <Message key={i} message={m} />
-        ))}
-      </ul>
-    );
-  }
-}
-
-class Message extends Component {
-  render() {
-    return <li style={{ margin: "10px" }}> {this.props.message} </li>;
   }
 }
